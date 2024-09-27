@@ -20,7 +20,7 @@ Apartment Building Standards is a bylaw enforcement program that formed in 2017 
 
 ### 2.1 Origin of the Data
 
-This is probably from municipal building records or some sort of housing authority (@pearce_tenants_2021), such as the Toronto Community Housing Corporation. These possibly could be gathered in a regular assessment to maintain qualities in the housing and ensure safety for the tenants, along with following all the regulations of the municipality. Some of the various attributes comprising this, such as the year of construction and property type, rating scores, and amenities, suggest that the assessment must be rather exhaustive of properties.
+This is probably from municipal building records or some sort of housing authority, such as the Toronto Community Housing Corporation. These possibly could be gathered in a regular assessment to maintain qualities in the housing and ensure safety for the tenants, along with following all the regulations of the municipality (@webber_renovictions_2023). Some of the various attributes comprising this, such as the year of construction and property type, rating scores, and amenities, suggest that the assessment must be rather exhaustive of properties.
 
 ### 2.2 Broader Context
 
@@ -28,7 +28,7 @@ This is probably from municipal building records or some sort of housing authori
 
 1.  Privacy and Confidentiality: Individual properties and their owners should be anonymized to protect privacy. Public datasets should be treated with caution not to reveal too much sensitive information.
 2.  Fairness in Housing: The dataset could reveal disparities in housing quality within neighborhoods. These kinds of analyses may uncover deep-seated issues in which some communities could be falling behind, and that would be an ethical concern with resource allocation or urban development.
-3.  Community Engagements: Community input is essential in an assessment process (@webber_renovictions_2023). It helps capture valuable insights from them about the struggles they face and therefore develops a more bottom-up inclusive approach toward assessments of housing conditions.
+3.  Community Engagements: Community input is essential in an assessment process. It helps capture valuable insights from them about the struggles they face and therefore develops a more bottom-up inclusive approach toward assessments of housing conditions.
 
 #### 2.2.2 Statistical Considerations
 
@@ -62,7 +62,7 @@ data_summary %>%
   tab_header(title = "Summary of Housing Data")
 ```
 
-This table summarizes key statistics that provide insight into the overall characteristics of the housing properties in the dataset. It is crucial to understand these metrics before delving deeper into specific analyses.
+This table summarizes key statistics that provide insight into the overall characteristics of the housing properties in the dataset. It is crucial to understand these metrics before delving deeper into specific analyses. 
 
 ## 4. Visualization
 
@@ -70,7 +70,7 @@ Visualizations enhance our understanding of the data by providing clear represen
 
 ### 4.1 Score Distribution for the Evaluation
 
-One of the first visualizations we can create is a histogram to explore the distribution of current building evaluation scores. This can help identify trends, such as whether most properties receive high or low evaluation scores.
+One of the first visualizations we can create is a histogram to explore the distribution of current building evaluation scores. This can help identify trends, such as whether most properties receive high or low evaluation scores. (@pearce_tenants_2021)
 
 ```{r}
 # Histogram of CURRENT BUILDING EVAL SCORE
@@ -84,7 +84,7 @@ ggplot(data, aes(x = current_building_eval_score)) +
 
 **Figure 1**: Present Building Assessment Score Distribution
 
-The histogram in Figure 1 displays the frequency of various evaluation scores across the properties. A majority of properties appear to cluster around higher scores, indicating a generally positive assessment of building conditions.
+The histogram in Figure 1 displays the frequency of various evaluation scores across the properties. A majority of properties appear to cluster around higher scores, indicating a generally positive assessment of building conditions. (@zhong_high-rise_2023)
 
 ### 4.2 Total Properties by Type of Property
 
@@ -106,11 +106,11 @@ Figure 2 shows the distribution of property types. As expected, it is dominated 
 
 ## 5. Cross-Reference Tables and Graphs
 
-TThis calls for the need to refer to our tables and figures as we interpret our findings in an attempt to make a coherent narrative. Overview information on housing is shown in Table 1. The mean evaluation score of 85.3 is relatively high, suggesting that the majority of the properties were in good condition. Figure 1 also suggests that most of the ratings fall between 80 and 90-all this justifies normally positive reviews. Figure 2 shows the assortment of housing types, with the highest percentage being private property. This could help in building the dynamics within a community, or it could be a contribution to discussions based on housing policy (@zhong_high-rise_2023).
+TThis calls for the need to refer to our tables and figures as we interpret our findings in an attempt to make a coherent narrative. Overview information on housing is shown in Table 1. The mean evaluation score of 85.3 is relatively high, suggesting that the majority of the properties were in good condition. Figure 1 also suggests that most of the ratings fall between 80 and 90-all this justifies normally positive reviews. Figure 2 shows the assortment of housing types, with the highest percentage being private property (@zhong_high-rise_2023). This could help in building the dynamics within a community, or it could be a contribution to discussions based on housing policy.
 
 ## Conclusion
 
-This analysis presented an overview of the dataset in terms of housing, also considering some ethical and statistical considerations. Using descriptive statistics and the development of visualizations, we revealed meaningful insights regarding residential relevant properties in Toronto. Future analysis can be carried out by correlating property types with evaluation scores or researching how location affects the quality of housing. Engaging a community perspective in this would enrich such an analysis and ensure the findings go toward a more equitable urban landscape.
+This analysis presented an overview of the dataset in terms of housing, also considering some ethical and statistical considerations. Using descriptive statistics and the development of visualizations, we revealed meaningful insights regarding residential relevant properties in Toronto. Future analysis can be carried out by correlating property types with evaluation scores or researching how location affects the quality of housing (@webber_renovictions_2023). Engaging a community perspective in this would enrich such an analysis and ensure the findings go toward a more equitable urban landscape.
 
 \newpage
 
