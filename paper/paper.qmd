@@ -4,6 +4,7 @@ author: "Cainchen Sun"
 date: "September 26, 2024"
 format: pdf
 editor: visual
+bibliography: references.bib
 echo: false
 ---
 
@@ -13,13 +14,13 @@ The dataset surveyed provides the most detailed information on the condition of 
 
 ## 1. Introduction
 
-Apartment Building Standards is a bylaw enforcement program that formed in 2017 in order to provide a guarantee that on building maintenance standards, the owners and operators of apartment buildings with three stories or more, or with ten units or more. For buildings that are registered with RentSafeTO, building evaluation scores are included in this collection. By-law Enforcement Officers conduct inspections of parking lots, the exterior grounds, mechanical and security systems and common areas. The RentsafeTO program revised its rating methodology in 2023. Licensing requires a minimum one rating every two years for a building, with fifty rating categories in all, with assigned weighting for each category. Each item in the category, after observation, is allocated a score ranging from one to three, with one being the lowest and three being the greatest. At times, an object may be accorded a score of 0 if it's impossible to assess because of some form of obstacle or due to a reluctance to inspect. In situations where the item is not applicable for the building at the time of assessment, the score would appear blank in the dataset.
+Apartment Building Standards is a bylaw enforcement program that formed in 2017 in order to provide a guarantee that on building maintenance standards, the owners and operators of apartment buildings with three stories or more, or with ten units or more. For buildings that are registered with RentSafeTO, building evaluation scores are included in this collection (@meftuh_declining_2023). By-law Enforcement Officers conduct inspections of parking lots, the exterior grounds, mechanical and security systems and common areas. The RentsafeTO program revised its rating methodology in 2023. Licensing requires a minimum one rating every two years for a building, with fifty rating categories in all, with assigned weighting for each category. Each item in the category, after observation, is allocated a score ranging from one to three, with one being the lowest and three being the greatest. At times, an object may be accorded a score of 0 if it's impossible to assess because of some form of obstacle or due to a reluctance to inspect. In situations where the item is not applicable for the building at the time of assessment, the score would appear blank in the dataset.
 
 ## 2. Data Source and Context
 
 ### 2.1 Origin of the Data
 
-This is probably from municipal building records or some sort of housing authority, such as the Toronto Community Housing Corporation. These possibly could be gathered in a regular assessment to maintain qualities in the housing and ensure safety for the tenants, along with following all the regulations of the municipality. Some of the various attributes comprising this, such as the year of construction and property type, rating scores, and amenities, suggest that the assessment must be rather exhaustive of properties.
+This is probably from municipal building records or some sort of housing authority (@pearce_tenants_2021), such as the Toronto Community Housing Corporation. These possibly could be gathered in a regular assessment to maintain qualities in the housing and ensure safety for the tenants, along with following all the regulations of the municipality. Some of the various attributes comprising this, such as the year of construction and property type, rating scores, and amenities, suggest that the assessment must be rather exhaustive of properties.
 
 ### 2.2 Broader Context
 
@@ -27,7 +28,7 @@ This is probably from municipal building records or some sort of housing authori
 
 1.  Privacy and Confidentiality: Individual properties and their owners should be anonymized to protect privacy. Public datasets should be treated with caution not to reveal too much sensitive information.
 2.  Fairness in Housing: The dataset could reveal disparities in housing quality within neighborhoods. These kinds of analyses may uncover deep-seated issues in which some communities could be falling behind, and that would be an ethical concern with resource allocation or urban development.
-3.  Community Engagements: Community input is essential in an assessment process. It helps capture valuable insights from them about the struggles they face and therefore develops a more bottom-up inclusive approach toward assessments of housing conditions.
+3.  Community Engagements: Community input is essential in an assessment process (@webber_renovictions_2023). It helps capture valuable insights from them about the struggles they face and therefore develops a more bottom-up inclusive approach toward assessments of housing conditions.
 
 #### 2.2.2 Statistical Considerations
 
@@ -42,7 +43,9 @@ This is probably from municipal building records or some sort of housing authori
 Descriptive statistics provide a foundation for understanding the dataset's key characteristics.
 
 ```{r}
-data <- read.csv("../toronto-apartments/data/analysis_data/Apartment_Building_Evaluation_cleaned.csv")
+library(tidyverse)
+library(gt)
+data <- read.csv("../data/analysis_data/Apartment_Building_Evaluation_cleaned.csv")
 
 # Create a data frame for better visualization
 data_summary <- data %>%
@@ -103,18 +106,12 @@ Figure 2 shows the distribution of property types. As expected, it is dominated 
 
 ## 5. Cross-Reference Tables and Graphs
 
-TThis calls for the need to refer to our tables and figures as we interpret our findings in an attempt to make a coherent narrative. Overview information on housing is shown in Table 1. The mean evaluation score of 85.3 is relatively high, suggesting that the majority of the properties were in good condition. Figure 1 also suggests that most of the ratings fall between 80 and 90-all this justifies normally positive reviews. Figure 2 shows the assortment of housing types, with the highest percentage being private property. This could help in building the dynamics within a community, or it could be a contribution to discussions based on housing policy.
+TThis calls for the need to refer to our tables and figures as we interpret our findings in an attempt to make a coherent narrative. Overview information on housing is shown in Table 1. The mean evaluation score of 85.3 is relatively high, suggesting that the majority of the properties were in good condition. Figure 1 also suggests that most of the ratings fall between 80 and 90-all this justifies normally positive reviews. Figure 2 shows the assortment of housing types, with the highest percentage being private property. This could help in building the dynamics within a community, or it could be a contribution to discussions based on housing policy (@zhong_high-rise_2023).
 
 ## Conclusion
 
 This analysis presented an overview of the dataset in terms of housing, also considering some ethical and statistical considerations. Using descriptive statistics and the development of visualizations, we revealed meaningful insights regarding residential relevant properties in Toronto. Future analysis can be carried out by correlating property types with evaluation scores or researching how location affects the quality of housing. Engaging a community perspective in this would enrich such an analysis and ensure the findings go toward a more equitable urban landscape.
 
+\newpage
+
 ## References
-
-Meftuh, N. The Declining Quality of Toronto’s Private Rental Towers and the Impending Risks to Low-Income Families (Doctoral dissertation, Toronto Metropolitan University).
-
-Pearce, E. (2021). Tenants rights and high-rise retrofits: policy considerations for Toronto (Doctoral dissertation, Toronto Metropolitan University).
-
-Webber, C., & Zigman, P. (2023). Renovictions: Displacement and Resistance in Toronto.
-
-Zhong, Z., & Gou, Z. (2023). High-rise apartment quality evaluation and related demographic factors: lesson from RentSafeTO programme. Building Research & Information, 51(4), 430-445.
